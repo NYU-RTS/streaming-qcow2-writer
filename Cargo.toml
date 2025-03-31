@@ -1,13 +1,13 @@
 [package]
 name = "streaming-qcow2-writer"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 license = "MIT"
 
 [dependencies]
-byteorder = "1.4"
+byteorder = "*"
 serde = { version = "*", features = ["derive"] }
 serde_json = "*"
 
 [target.'cfg(unix)'.dependencies]
-nix = "*"
+nix = { version = "*", features = ["ioctl"] }
